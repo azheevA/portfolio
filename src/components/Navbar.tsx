@@ -17,7 +17,7 @@ const NavBar = () => {
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
         <a href="#hero" className="logo">
-          Adrian JSM
+          Azheev Alexandr Portfolio
         </a>
 
         <nav className="desktop">
@@ -35,7 +35,7 @@ const NavBar = () => {
 
         <a href="#contact" className="contact-btn group">
           <div className="inner">
-            <span>Contact me</span>
+            <span>Связаться со мной</span>
           </div>
         </a>
       </div>
