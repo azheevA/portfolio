@@ -27,7 +27,7 @@ const words = [
   { text: "Код", imgPath: "/images/code.svg" },
 ];
 const counterItems = [
-  { value: 1 - 2, suffix: "+", label: "Лет в разработке" },
+  { value: 1, suffix: "+", label: "Лет в разработке" },
   //   { value: 200, suffix: "+", label: "Удовлетворенных Клиентов" },
   { value: 26, suffix: "+", label: "Завершенных проектов" },
   { value: 87, suffix: "%", label: "Положительных отзывов от клиентов" },
