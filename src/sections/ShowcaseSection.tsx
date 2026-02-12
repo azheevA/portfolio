@@ -45,7 +45,7 @@ const AppShowcase = () => {
       <div className="w-full">
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
-            <div className="image-wrapper">
+            <div className="image-wrapper bg-[#FFEFDB]">
               <img src="/images/project1.png" alt="not founded" />
             </div>
             <div className="text-content">
@@ -61,17 +61,14 @@ const AppShowcase = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={libraryRef}>
               <div className="image-wrapper bg-[#FFEFDB]">
-                <img
-                  src="/images/project2.png"
-                  alt="Library Management Platform"
-                />
+                <img src="/images/project2.png" alt="not founded" />
               </div>
               <h2>Реализация Dashboard'a с моковыми данными на React.js</h2>
             </div>
 
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+                <img src="/images/project3.png" alt="not founded" />
               </div>
               <h2>Фулл-стак приложение Next и Nest.js </h2>
             </div>
