@@ -180,6 +180,15 @@ const techStackImgs = [
     imgPath: "/images/logos/git.svg",
   },
 ];
+const testimonials = [
+  {
+    name: "Ажеев Сергей",
+    mentions: "@sumi4ka",
+    review:
+      "Работать с Сашей — это прежде всего про надежность и уверенность в результате. Я всегда знаю, что он не просто выполнит задачу, а вникнет в самую суть и сделает всё на совесть. Он очень отзывчивый и всегда готов поддержать, когда проект требует особого внимания. С ним чувствуешь себя в надежных руках — и как с разработчиком, и как с человеком.",
+    imgPath: "/images/client1.jpg",
+  },
+];
 export {
   navLinks,
   words,
@@ -189,4 +198,5 @@ export {
   expCards,
   techStackIcons,
   techStackImgs,
+  testimonials,
 };
