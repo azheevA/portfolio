@@ -1,3 +1,10 @@
+interface ModelConfig {
+  name: string;
+  modelPath: string;
+  scale: number | [number, number, number];
+  rotation: [number, number, number];
+}
+
 const navLinks = [
   {
     name: "Работа",
@@ -125,4 +132,61 @@ const expCards = [
     ],
   },
 ];
-export { navLinks, words, counterItems, logoIconsList, abilities, expCards };
+const techStackIcons: ModelConfig[] = [
+  {
+    name: "React/Next.js разработчик",
+    modelPath: "/models/react_logo-transformed.glb",
+    scale: 1,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Node/Nest.js разработчик",
+    modelPath: "/models/node-transformed.glb",
+    scale: 5,
+    rotation: [0, -Math.PI / 2, 0],
+  },
+  {
+    name: "Разработчик интерактивных решений",
+    modelPath: "/models/three.js-transformed.glb",
+    scale: 0.05,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Менеджер проектов",
+    modelPath: "/models/git-svg-transformed.glb",
+    scale: 0.05,
+    rotation: [0, -Math.PI / 4, 0],
+  },
+] as const;
+const techStackImgs = [
+  {
+    name: "React Developer",
+    imgPath: "/images/logos/react.png",
+  },
+  {
+    name: "Python Developer",
+    imgPath: "/images/logos/python.svg",
+  },
+  {
+    name: "Backend Developer",
+    imgPath: "/images/logos/node.png",
+  },
+  {
+    name: "Interactive Developer",
+    imgPath: "/images/logos/three.png",
+  },
+  {
+    name: "Project Manager",
+    imgPath: "/images/logos/git.svg",
+  },
+];
+export {
+  navLinks,
+  words,
+  counterItems,
+  logoIconsList,
+  abilities,
+  expCards,
+  techStackIcons,
+  techStackImgs,
+};
