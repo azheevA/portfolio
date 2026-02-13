@@ -24,15 +24,12 @@ const Hero = () => {
         <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
           <div className="flex flex-col gap-7">
             <div className="hero-text">
-              <h1 className="text-hidden">
-                S
+              <h1 className="">
+                Воплощаю
                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
-                      <span
-                        key={index}
-                        className="flex items-center md:gap-3 gap-1 pb-2"
-                      >
+                      <span key={index} className="flex items-center pb-2">
                         <img
                           src={word.imgPath}
                           alt="person"

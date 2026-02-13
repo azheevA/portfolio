@@ -1,4 +1,5 @@
 import NavBar from "./components/Navbar";
+import Contact from "./sections/Contact";
 import Experience from "./sections/Experience";
 import FeatureCards from "./sections/FeatureCard";
 import Hero from "./sections/Hero";
@@ -18,6 +19,7 @@ function App() {
       <Experience />
       <TechStack />
       <Testimonials />
+      <Contact />
     </>
   );
 }

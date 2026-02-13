@@ -54,8 +54,6 @@ section {
   .mt-responsive {
     @apply xl:mt-20 md:mt-0 mt-40;
   }
-
-  /* General Grids */
   .grid-base {
     @apply grid grid-cols-1;
   }
@@ -223,7 +221,9 @@ section {
       }
     }
   }
-
+  .card-border {
+    @apply border border-black-50 bg-black-100;
+  }
   .marquee-item {
     @apply md:w-40 w-32;
   }
@@ -266,6 +266,24 @@ section {
 
   .tech-icon-wrapper {
     @apply flex justify-center items-center w-52 h-60 relative;
+  }
+  form {
+    label {
+      @apply block text-white-50 mb-2;
+    }
+
+    input,
+    textarea {
+      @apply w-full px-4 py-4 md:text-base text-sm placeholder:text-blue-50 bg-blue-100 rounded-md;
+    }
+
+    a {
+      @apply w-full py-4 bg-white text-black font-semibold rounded-md flex justify-center items-center gap-2;
+
+      img {
+        @apply inline-block;
+      }
+    }
   }
 }
 
@@ -321,5 +339,91 @@ section {
   }
   100% {
     left: -100%;
+  }
+}
+.card {
+  --start: 0;
+  position: relative;
+  z-index: 40;
+  overflow: hidden;
+  transition: border-color 1s ease-in-out;
+}
+
+.card::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: var(--gradient);
+  background-attachment: fixed;
+  mask:
+    linear-gradient(#0000, #0000),
+    conic-gradient(
+      from calc((var(--start) - 15) * 1deg),
+      #ffffff1f 0deg,
+      white,
+      #ffffff00 100deg
+    );
+  mask-composite: intersect;
+  mask-clip: padding-box, border-box;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.glow {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(10px);
+  filter: saturate(200);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+.slide {
+  display: inline-block;
+  flex-direction: column;
+  transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+}
+@keyframes wordSlider {
+  0% {
+    transform: translateY(0.5%);
+  }
+  12.5% {
+    transform: translateY(-12.5%);
+  }
+  25% {
+    transform: translateY(-25%);
+  }
+  37.5% {
+    transform: translateY(-37.5%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  62.5% {
+    transform: translateY(-62.5%);
+  }
+  75% {
+    transform: translateY(-75%);
+  }
+  87.5% {
+    transform: translateY(-87.5%);
   }
 }
