@@ -6,7 +6,11 @@ import HeroLights from "./HeroLights";
 import Particles from "./Particles";
 import { Room } from "./Room";
 
-const HeroExperience = () => {
+interface HeroExperienceProps {
+  onInteract: () => void;
+}
+
+const HeroExperience = ({ onInteract }: HeroExperienceProps) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
@@ -21,6 +25,7 @@ const HeroExperience = () => {
         minDistance={5}
         minPolarAngle={Math.PI / 5}
         maxPolarAngle={Math.PI / 2}
+        onStart={onInteract}
       />
 
       <Suspense fallback={null}>
