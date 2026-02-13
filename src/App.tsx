@@ -2,6 +2,7 @@ import NavBar from "./components/Navbar";
 import Contact from "./sections/Contact";
 import Experience from "./sections/Experience";
 import FeatureCards from "./sections/FeatureCard";
+import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
 import LogoShowcase from "./sections/LogoShowcase";
 import AppShowcase from "./sections/ShowcaseSection";
@@ -20,6 +21,7 @@ function App() {
       <TechStack />
       <Testimonials />
       <Contact />
+      <Footer />
     </>
   );
 }

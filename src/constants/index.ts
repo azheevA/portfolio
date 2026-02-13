@@ -1,3 +1,5 @@
+import { DiscordIcon, GithubIcon, TelegramIcon, VKIcon } from "./svg";
+
 interface ModelConfig {
   name: string;
   modelPath: string;
@@ -189,6 +191,60 @@ const testimonials = [
     imgPath: "/images/client1.jpg",
   },
 ];
+const socialImgs = [
+  {
+    name: "insta",
+    imgPath: "/images/insta.png",
+  },
+  {
+    name: "fb",
+    imgPath: "/images/fb.png",
+  },
+  {
+    name: "x",
+    imgPath: "/images/x.png",
+  },
+  {
+    name: "linkedin",
+    imgPath: "/images/linkedin.png",
+  },
+];
+
+const siteConfig = {
+  links: {
+    telegram: "https://t.me/твой_ник",
+    discord: "https://discord.com/users/твой_айди",
+    github: "https://github.com/твой_ник",
+    vk: "https://vk.com/твоя_страница",
+  },
+};
+
+const socials = [
+  {
+    name: "Telegram",
+    href: siteConfig.links.telegram,
+    icon: TelegramIcon,
+    label: "Перейти в Telegram Александра",
+  },
+  {
+    name: "Discord",
+    href: siteConfig.links.discord,
+    icon: DiscordIcon,
+    label: "Связаться в Discord",
+  },
+  {
+    name: "Github",
+    href: siteConfig.links.github,
+    icon: GithubIcon,
+    label: "Посмотреть проекты на Github",
+  },
+  {
+    name: "VK",
+    href: siteConfig.links.vk,
+    icon: VKIcon,
+    label: "Профиль ВКонтакте",
+  },
+];
 export {
   navLinks,
   words,
@@ -199,4 +255,7 @@ export {
   techStackIcons,
   techStackImgs,
   testimonials,
+  socialImgs,
+  siteConfig,
+  socials,
 };
