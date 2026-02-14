@@ -15,10 +15,13 @@ const NavBar = () => {
 
   return (
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
-      <div className="inner">
-        <a href="#hero" className="logo">
-          Портфолио Ажеева Александра
-        </a>
+      <div className="inner ">
+        <div className="profile">
+          <img src="/ghost_raven.png" className="h-16 w-16 rounded-full" />
+          <a href="#hero" className="logo">
+            Портфолио Ажеева Александра
+          </a>
+        </div>
 
         <nav className="desktop">
           <ul>

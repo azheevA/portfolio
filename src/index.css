@@ -101,7 +101,7 @@ section {
   }
 
   .navbar {
-    @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-100 transition-all duration-300 ease-in-out;
+    @apply fixed w-full left-1/2 py-2 px-5 md:px-20 -translate-x-1/2 z-100 transition-all duration-300 ease-in-out;
 
     &.scrolled {
       @apply top-0 bg-black;
@@ -110,23 +110,25 @@ section {
     &.not-scrolled {
       @apply md:top-10 top-0 bg-transparent;
     }
-
+    .profile {
+      @apply flex flex-row items-center justify-center gap-2 hover:scale-105;
+    }
     .inner {
       @apply mx-auto flex items-center justify-between;
     }
 
     .logo {
-      @apply text-white-50 text-xl md:text-2xl font-semibold transition-transform duration-300 hover:scale-105;
+      @apply text-white-50 text-xl md:text-2xl font-semibold transition-transform duration-300;
     }
 
     nav.desktop {
       @apply hidden lg:flex items-center;
 
       ul {
-        @apply flex space-x-8;
+        @apply flex lg:space-x-15 space-x-6;
 
         li {
-          @apply text-white-50 relative;
+          @apply text-white-50 text-xl relative;
 
           span {
             @apply transition-colors duration-300 hover:text-white;
