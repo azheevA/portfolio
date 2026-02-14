@@ -18,7 +18,10 @@ const Hero = () => {
   });
 
   return (
-    <section id="hero" className="relative overflow-hidden min-h-screen">
+    <section
+      id="hero"
+      className="static xl:relative overflow-hidden min-h-screen"
+    >
       <div className="absolute top-0 left-0 z-10">
         <img src="/images/bg.png" alt="" />
       </div>
@@ -56,7 +59,7 @@ const Hero = () => {
             />
           </div>
         </header>
-        <figure className="">
+        <figure className="w-full">
           <div className="hero-3d-layout h-full">
             <HeroExperience onInteract={() => setHasInteracted(true)} />
           </div>

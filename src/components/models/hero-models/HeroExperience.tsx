@@ -15,7 +15,10 @@ const HeroExperience = ({ onInteract }: HeroExperienceProps) => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
   return (
-    <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+    <Canvas
+      style={{ width: "100%", height: "100%" }}
+      camera={{ position: [0, 0, 15], fov: 45 }}
+    >
       <ambientLight intensity={0.2} color="#1a1a40" />
 
       <OrbitControls
