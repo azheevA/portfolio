@@ -212,10 +212,10 @@ const socialImgs = [
 
 const siteConfig = {
   links: {
-    telegram: "https://t.me/твой_ник",
-    discord: "https://discord.com/users/твой_айди",
-    github: "https://github.com/твой_ник",
-    vk: "https://vk.com/твоя_страница",
+    telegram: "https://t.me/ghost_raven",
+    discord: "https://discord.gg/9b6yyZKmH4",
+    github: "https://github.com/azheevA",
+    vk: "https://vk.com/ghostraven72",
   },
 };
 

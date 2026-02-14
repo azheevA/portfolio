@@ -30,7 +30,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Ажеев Александр. Все права защищены.
           </p>
           <a
-            href="https://ulan-ude.hh.ru/resume/54894c25ff0d2512130039ed1f45793857656d?hhtmFrom=resume_list"
+            href="https://github.com/azheevA"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-current mt-1 hover:opacity-80 transition-opacity"

@@ -5,6 +5,7 @@ import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
 import HeroExperience from "../components/models/hero-models/HeroExperience";
 import { useState } from "react";
+import { TextWritter } from "../components/models/hero-models/TextWritter";
 
 const Hero = () => {
   const [hasInteracted, setHasInteracted] = useState(false);
@@ -47,14 +48,10 @@ const Hero = () => {
               <h1>которые приносят результаты</h1>
             </div>
 
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              Привет, Я Ажеев Александр фронтенд-разрабочик из Россиии, рад
-              знакомству!!!
-            </p>
-
+            <TextWritter className="text-2xl md:text-3xl font-extrabold tracking-tight" />
             <Button
               text="Увидеть мою работу"
-              className="md:w-80 md:h-16 w-60 h-12"
+              className="md:w-96 md:h-16 w-72 h-12"
               id="counter"
             />
           </div>
