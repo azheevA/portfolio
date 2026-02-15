@@ -183,7 +183,7 @@ section {
     }
 
     .first-project-wrapper {
-      @apply h-full flex flex-col justify-between xl:w-[60%];
+      @apply h-full flex flex-col justify-between xl:w-[60%] p-4 xl:p-0;
 
       .image-wrapper {
         @apply xl:h-[70vh] md:h-[50vh] h-96 relative rounded-xl hover:scale-101 transition-all duration-200 ease-in;
@@ -205,14 +205,14 @@ section {
     }
 
     .project-list-wrapper {
-      @apply flex md:flex-row flex-col xl:flex-col gap-10 xl:w-[40%];
+      @apply flex flex-col xl:flex-col gap-10 xl:w-[40%] p-5 xl:p-0;
 
       .image-wrapper {
-        @apply xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;
+        @apply xl:h-[37vh]  h-125 relative rounded-xl xl:px-5 2xl:px-12 py-0;
       }
 
       img {
-        @apply w-full h-full object-contain rounded-xl hover:scale-101 transition-all duration-200 ease-in;
+        @apply w-full h-full object-cover rounded-xl absolute inset-0 hover:scale-101 transition-all duration-200 ease-in;
       }
 
       h2 {
