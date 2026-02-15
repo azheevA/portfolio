@@ -1,4 +1,4 @@
-import { DiscordIcon, GithubIcon, TelegramIcon, VKIcon } from "./svg";
+import { GithubIcon, TelegramIcon, VKIcon } from "./svg";
 
 interface ModelConfig {
   name: string;
@@ -225,12 +225,6 @@ const socials = [
     href: siteConfig.links.telegram,
     icon: TelegramIcon,
     label: "Перейти в Telegram Александра",
-  },
-  {
-    name: "Discord",
-    href: siteConfig.links.discord,
-    icon: DiscordIcon,
-    label: "Связаться в Discord",
   },
   {
     name: "Github",
