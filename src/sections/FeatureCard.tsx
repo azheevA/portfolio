@@ -8,7 +8,7 @@ const FeatureCards = () => (
         <Motion>
           <div
             key={title}
-            className="card-border rounded-xl p-8 flex flex-col gap-4"
+            className="card-border rounded-xl p-8 flex flex-col gap-4 hover:scale-105 transition-all duration-200 ease-in-out"
           >
             <div className="size-14 flex items-center justify-center rounded-full">
               <img src={imgPath} alt={title} />

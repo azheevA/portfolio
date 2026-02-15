@@ -16,7 +16,7 @@ const NavBar = () => {
   return (
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner ">
-        <div className="flex flex-row flex-center">
+        <div className="flex flex-row flex-center hover:scale-105">
           <img src="/ghost_raven.png" className="h-16 w-16 rounded-full " />
           <a href="#hero" className="logo">
             Портфолио
