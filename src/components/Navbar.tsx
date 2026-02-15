@@ -19,7 +19,7 @@ const NavBar = () => {
         <div className="flex flex-row flex-center">
           <img src="/ghost_raven.png" className="h-16 w-16 rounded-full " />
           <a href="#hero" className="logo">
-            Портфолио Ажеева Александра
+            Портфолио
           </a>
         </div>
 

@@ -13,17 +13,16 @@ interface HeroExperienceProps {
 const HeroExperience = ({ onInteract }: HeroExperienceProps) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
-
   return (
     <Canvas
       style={{ width: "100%", height: "100%" }}
-      camera={{ position: [0, 0, 15], fov: 45 }}
+      camera={{ position: [0, 0, 15], fov: isMobile ? 50 : 45 }}
     >
       <ambientLight intensity={0.2} color="#1a1a40" />
 
       <OrbitControls
         enablePan={false}
-        enableZoom={!isTablet}
+        enableZoom={false}
         maxDistance={20}
         minDistance={5}
         minPolarAngle={Math.PI / 5}
@@ -35,8 +34,8 @@ const HeroExperience = ({ onInteract }: HeroExperienceProps) => {
         <HeroLights />
         <Particles count={100} />
         <group
-          scale={isMobile ? 0.7 : 1}
-          position={[0, -3.5, 0]}
+          scale={isMobile ? 0.9 : isTablet ? 1.2 : 1}
+          position={isTablet ? [0, -2, 0] : [0, -3.5, 0]}
           rotation={[0, -Math.PI / 4, 0]}
         >
           <Room />

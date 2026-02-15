@@ -40,7 +40,7 @@ export function Room(props: ThreeElements["group"]) {
       <EffectComposer>
         <SelectiveBloom
           selection={screensRef}
-          intensity={1.5}
+          intensity={2}
           luminanceThreshold={0.2}
           luminanceSmoothing={0.9}
           blendFunction={BlendFunction.ADD}

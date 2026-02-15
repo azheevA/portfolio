@@ -35,13 +35,16 @@ const Hero = () => {
                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
-                      <span key={index} className="flex items-center pb-2">
+                      <span
+                        key={index}
+                        className="flex items-center pb-2 gap-2 "
+                      >
+                        <span className="underline">{word.text}</span>
                         <img
                           src={word.imgPath}
                           alt="person"
                           className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
                         />
-                        <span>{word.text}</span>
                       </span>
                     ))}
                   </span>
@@ -59,7 +62,7 @@ const Hero = () => {
             />
           </div>
         </header>
-        <figure className="w-full">
+        <figure className="w-full h-125  xl:h-full -z-999">
           <div className="hero-3d-layout h-full">
             <HeroExperience onInteract={() => setHasInteracted(true)} />
           </div>
@@ -70,7 +73,7 @@ const Hero = () => {
       {!hasInteracted && (
         <div
           className="absolute z-50 flex flex-col items-center gap-2 pointer-events-none opacity-70
-         top-[65%] left-1/2 -translate-x-1/2         
+         top-[90%] left-1/2 -translate-x-1/2         
           xl:bottom-20 xl:left-[75%] xl:translate-x-[-50%] 
         "
         >
