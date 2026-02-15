@@ -42,7 +42,7 @@ const AppShowcase = () => {
 
   return (
     <div id="work" ref={sectionRef} className="app-showcase">
-      <div className="w-full">
+      <div className="w-full" id="counter">
         <div className="showcaselayout">
           <div ref={rydeRef} className="first-project-wrapper">
             <div className="image-wrapper bg-[#FFEFDB]">
@@ -51,7 +51,7 @@ const AppShowcase = () => {
             <div className="text-content">
               <h2>Приложение Space Flow</h2>
               <p className="text-white-50 md:text-xl">
-                Полноценное фуллстак приложения на Next и Nest.js с полной
+                Полноценное фулстек приложение на Next и Nest.js с полной
                 авторизацией для коллекционирования карточек с информацией
                 небесных объектах
               </p>
@@ -70,7 +70,7 @@ const AppShowcase = () => {
               <div className="image-wrapper bg-[#FFE7EB]">
                 <img src="/images/project3.png" alt="not founded" />
               </div>
-              <h2>Фулл-стак приложение Next и Nest.js </h2>
+              <h2>Фулстек приложение Next и Nest.js </h2>
             </div>
           </div>
         </div>

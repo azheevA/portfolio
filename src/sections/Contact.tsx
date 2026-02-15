@@ -1,5 +1,6 @@
 import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 import TitleHeader from "../components/TitleHeader";
 import ContactExperience from "../components/models/contact/ContactExperience";
 
@@ -29,9 +30,7 @@ const Contact = () => {
     e.preventDefault();
 
     if (!formRef.current) return;
-
     setLoading(true);
-
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID as string,
@@ -39,21 +38,30 @@ const Contact = () => {
         formRef.current,
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY as string,
       );
+      toast.success("Сообщение успешно отправлено! ", {
+        duration: 4000,
+        position: "bottom-right",
+      });
 
       setForm({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("EmailJS Error:", error);
+      toast.error("Что-то пошло не так. Попробуйте позже.", {
+        duration: 4000,
+        position: "bottom-right",
+      });
     } finally {
       setLoading(false);
     }
   };
-
   return (
     <section id="contact" className="flex-center section-padding">
+      <Toaster />
+
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
           title="Свяжитесь со мной"
-          sub="💬 Есть вопросы или идеи? Давайте обсудим! 🚀"
+          sub="Есть вопросы или идеи? Давайте обсудим!"
         />
         <div className="grid-12-cols mt-16">
           <div className="xl:col-span-5">
@@ -75,7 +83,6 @@ const Contact = () => {
                     required
                   />
                 </div>
-
                 <div>
                   <label htmlFor="email">Ваш Email</label>
                   <input
@@ -88,7 +95,6 @@ const Contact = () => {
                     required
                   />
                 </div>
-
                 <div>
                   <label htmlFor="message">Сообщение</label>
                   <textarea
@@ -101,7 +107,6 @@ const Contact = () => {
                     required
                   />
                 </div>
-
                 <button type="submit" disabled={loading}>
                   <div className="cta-button group">
                     <div className="bg-circle" />

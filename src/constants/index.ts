@@ -96,7 +96,7 @@ const abilities = [
 const expCards = [
   {
     review:
-      "Александр — мастер системного подхода. Он не просто пишет код на Nest.js, но и упаковывает его в Docker, документирует через Swagger и обеспечивает безопасность уровня argon2. Работа с Oracle API выполнена безупречно.",
+      "Использую системный подход к разработке: пишу код на Nest.js, упаковываю приложения в Docker, документирую через Swagger и настраиваю безопасность через argon2. Работаю с Oracle API.",
     imgPath: "/images/exp_react.png",
     logoPath: "/images/logo_nextjs.png",
     title: "Fullstack Developer (Nest.js / Next.js)",
@@ -109,7 +109,7 @@ const expCards = [
   },
   {
     review:
-      "Его навыки работы с состоянием приложения через Redux Toolkit и кэшированием данных в Tanstack Query вывели наш фронтенд на новый уровень. Очень ценно внимание к деталям и производительности.",
+      "Работаю с состоянием приложения через Redux Toolkit и кэшированием данных в Tanstack Query. Уделяю внимание деталям и производительности фронтенд-части.",
     imgPath: "/images/exp_vue3.png",
     logoPath: "/images/logo_nestjs.png",
     title: "Frontend Developer (React / Redux)",
@@ -122,7 +122,7 @@ const expCards = [
   },
   {
     review:
-      "Александр уделяет внимание качеству кода: внедрение тестов на Vitest помогло нам сократить количество багов. Опыт работы с Vue позволяет ему быстро переключаться между разными стеками проекта.",
+      "Уделяю внимание качеству кода и внедряю тесты на Vitest для сокращения багов. Имею опыт работы с Vue, что позволяет быстро переключаться между разными стеками в рамках проекта.",
     imgPath: "/images/exp_angular.png",
     logoPath: "/images/logo_docker.png",
     title: "Frontend Developer (Vue / Testing)",
