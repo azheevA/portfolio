@@ -75,6 +75,7 @@ const Hero = () => {
           className="absolute z-50 flex flex-col items-center gap-2 pointer-events-none opacity-70
          top-[90%] left-1/2 -translate-x-1/2         
           xl:bottom-20 xl:left-[75%] xl:translate-x-[-50%] 
+          md:top-[60%]
         "
         >
           <svg
