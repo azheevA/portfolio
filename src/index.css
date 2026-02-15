@@ -207,11 +207,11 @@ section {
       @apply flex flex-col xl:flex-col gap-10 xl:w-[40%] p-5 xl:p-0;
 
       .image-wrapper {
-        @apply xl:h-[37vh]  h-125 relative rounded-xl xl:px-5 2xl:px-12 py-0;
+        @apply xl:h-[30vh] min-h-80 relative rounded-xl xl:px-5 2xl:px-12 py-0;
       }
 
       img {
-        @apply w-full h-full object-cover rounded-xl absolute inset-0 hover:scale-101 transition-all duration-200 ease-in;
+        @apply w-full h-full object-fill rounded-xl absolute inset-0 hover:scale-101 transition-all duration-200 ease-in;
       }
 
       h2 {
