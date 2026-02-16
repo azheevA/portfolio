@@ -63,14 +63,14 @@ const AppShowcase = () => {
               <div className="image-wrapper bg-[#FFEFDB]">
                 <img src="/images/project2.png" alt="not founded" />
               </div>
-              <h2>Реализация Dashboard'a с моковыми данными на React.js</h2>
+              <h2>Фулстек приложение Next и Nest.js</h2>
             </div>
 
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
                 <img src="/images/project3.png" alt="not founded" />
               </div>
-              <h2>Фулстек приложение Next и Nest.js </h2>
+              <h2>Реализация Dashboard'a с моковыми данными на React.js</h2>
             </div>
           </div>
         </div>
