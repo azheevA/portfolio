@@ -1,0 +1,41 @@
+import GlowCard from "../components/GlowCard";
+import TitleHeader from "../components/TitleHeader";
+import { testimonials } from "../constants";
+import Image from "next/image";
+
+const Testimonials = () => {
+  return (
+    <section id="testimonials" className="flex-center section-padding">
+      <div className="w-full h-full md:px-10 px-5">
+        <TitleHeader
+          title="Что обо мне говорят?"
+          sub="⭐️ Главное из отзывов клиентов"
+        />
+
+        <div className="lg:columns-3 md:columns-2 columns-1 mt-16">
+          {testimonials.map((testimonial, index) => (
+            <GlowCard card={testimonial} key={index} index={index}>
+              <div className="flex items-center gap-3">
+                <div>
+                  <Image
+                    src={testimonial.imgPath}
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full object-cover border-2 border-white/10 shadow-sm"
+                    width={300}
+                    height={300}
+                  />
+                </div>
+                <div>
+                  <p className="font-bold">{testimonial.name}</p>
+                  <p className="text-white-50">{testimonial.mentions}</p>
+                </div>
+              </div>
+            </GlowCard>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonials;
