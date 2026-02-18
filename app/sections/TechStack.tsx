@@ -3,7 +3,13 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { techStackIcons } from "../constants";
 import TitleHeader from "../components/TitleHeader";
-import TechIconCardExperience from "../components/models/tech_logos/TechIconCardExperience";
+import dynamic from "next/dynamic";
+
+const TechIconCardExperience = dynamic(
+  () => import("../components/models/tech_logos/TechIconCardExperience"),
+  { ssr: false },
+);
+// import TechIconCardExperience from "../components/models/tech_logos/TechIconCardExperience";
 
 const TechStack = () => {
   useGSAP(() => {
