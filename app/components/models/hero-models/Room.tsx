@@ -1,18 +1,19 @@
 "use client";
-import * as THREE from "three";
+import { Mesh, MeshPhongMaterial, MeshStandardMaterial, Material } from "three";
 import { useRef, useMemo } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 import { EffectComposer, SelectiveBloom } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 import type { GLTF } from "three-stdlib";
 import type { ThreeElements } from "@react-three/fiber";
+import { useMediaQuery } from "react-responsive";
 
 type GLTFResult = GLTF & {
   nodes: {
-    [key: string]: THREE.Mesh;
+    [key: string]: Mesh;
   };
   materials: {
-    [key: string]: THREE.Material;
+    [key: string]: Material;
   };
 };
 
@@ -20,33 +21,35 @@ export function Room(props: ThreeElements["group"]) {
   const { nodes, materials } = useGLTF(
     "/models/optimized-room.glb",
   ) as unknown as GLTFResult;
-  const screensRef = useRef<THREE.Mesh>(null!);
+  const screensRef = useRef<Mesh>(null!);
   const matcapTexture = useTexture("/images/textures/mat1.png");
-
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const m = useMemo(
     () => ({
-      curtain: new THREE.MeshPhongMaterial({ color: "#d90429" }),
-      body: new THREE.MeshPhongMaterial({ map: matcapTexture }),
-      table: new THREE.MeshPhongMaterial({ color: "#582f0e" }),
-      radiator: new THREE.MeshPhongMaterial({ color: "#fff" }),
-      comp: new THREE.MeshStandardMaterial({ color: "#fff" }),
-      pillow: new THREE.MeshPhongMaterial({ color: "#8338ec" }),
-      chair: new THREE.MeshPhongMaterial({ color: "#000" }),
+      curtain: new MeshPhongMaterial({ color: "#d90429" }),
+      body: new MeshPhongMaterial({ map: matcapTexture }),
+      table: new MeshPhongMaterial({ color: "#582f0e" }),
+      radiator: new MeshPhongMaterial({ color: "#fff" }),
+      comp: new MeshStandardMaterial({ color: "#fff" }),
+      pillow: new MeshPhongMaterial({ color: "#8338ec" }),
+      chair: new MeshPhongMaterial({ color: "#000" }),
     }),
     [matcapTexture],
   );
 
   return (
     <group {...props} dispose={null}>
-      <EffectComposer>
-        <SelectiveBloom
-          selection={screensRef}
-          intensity={2}
-          luminanceThreshold={0.2}
-          luminanceSmoothing={0.9}
-          blendFunction={BlendFunction.ADD}
-        />
-      </EffectComposer>
+      {!isMobile && (
+        <EffectComposer>
+          <SelectiveBloom
+            selection={screensRef}
+            intensity={2}
+            luminanceThreshold={0.2}
+            luminanceSmoothing={0.9}
+            blendFunction={BlendFunction.ADD}
+          />
+        </EffectComposer>
+      )}
 
       <mesh
         geometry={nodes._________6_blinn1_0.geometry}

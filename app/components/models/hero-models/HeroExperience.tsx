@@ -5,12 +5,14 @@ import { Suspense } from "react";
 import HeroLights from "./HeroLights";
 import Particles from "./Particles";
 import { Room } from "./Room";
+import { SceneReady } from "./SceneReady";
 
 interface HeroExperienceProps {
   onInteract: () => void;
+  onLoaded: () => void;
 }
 
-const HeroExperience = ({ onInteract }: HeroExperienceProps) => {
+const HeroExperience = ({ onInteract, onLoaded }: HeroExperienceProps) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   return (
@@ -31,8 +33,9 @@ const HeroExperience = ({ onInteract }: HeroExperienceProps) => {
       />
 
       <Suspense fallback={null}>
+        <SceneReady onLoaded={onLoaded} />
         <HeroLights />
-        <Particles count={100} />
+        <Particles count={isMobile ? 40 : 100} />
         <group
           scale={isMobile ? 0.9 : isTablet ? 1.2 : 1}
           position={isTablet ? [0, -2, 0] : [0, -3.5, 0]}

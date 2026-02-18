@@ -3,7 +3,10 @@ import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 import TitleHeader from "../components/TitleHeader";
-import ContactExperience from "../components/models/contact/ContactExperience";
+import dynamic from "next/dynamic";
+const ContactExperience = dynamic(
+  () => import("../components/models/contact/ContactExperience"),
+);
 import Image from "next/image";
 
 interface FormState {

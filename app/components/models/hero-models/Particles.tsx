@@ -1,5 +1,5 @@
 "use client";
-import * as THREE from "three";
+import { Points, BufferAttribute } from "three";
 import { useRef, useMemo, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 
@@ -20,7 +20,7 @@ const createParticles = (count: number): Particle[] => {
 };
 
 const Particles = ({ count = 200 }: { count?: number }) => {
-  const mesh = useRef<THREE.Points>(null!);
+  const mesh = useRef<Points>(null!);
 
   const [particleData] = useState(() => createParticles(count));
 
@@ -36,8 +36,7 @@ const Particles = ({ count = 200 }: { count?: number }) => {
 
   useFrame(() => {
     if (!mesh.current) return;
-    const attr = mesh.current.geometry.attributes
-      .position as THREE.BufferAttribute;
+    const attr = mesh.current.geometry.attributes.position as BufferAttribute;
     const array = attr.array as Float32Array;
 
     for (let i = 0; i < count; i++) {

@@ -15,6 +15,7 @@ import Image from "next/image";
 
 const Hero = () => {
   const [hasInteracted, setHasInteracted] = useState(false);
+  const [isSceneReady, setIsSceneReady] = useState(false);
   useGSAP(() => {
     gsap.fromTo(
       ".hero-text h1",
@@ -72,19 +73,23 @@ const Hero = () => {
         </header>
         <figure className="w-full h-125  xl:h-full -z-999">
           <div className="hero-3d-layout h-full">
-            <HeroExperience onInteract={() => setHasInteracted(true)} />
+            <HeroExperience
+              onInteract={() => setHasInteracted(true)}
+              onLoaded={() => setIsSceneReady(true)}
+            />
           </div>
         </figure>
       </div>
 
       <AnimatedCounter />
-      {!hasInteracted && (
+      {isSceneReady && !hasInteracted && (
         <div
-          className="absolute z-50 flex flex-col items-center gap-2 pointer-events-none opacity-70
-         top-[90%] left-1/2 -translate-x-1/2         
-          xl:bottom-20 xl:left-[75%] xl:translate-x-[-50%] 
-          md:top-[60%]
-        "
+          className="
+                absolute z-50 flex flex-col items-center gap-2
+                pointer-events-none opacity-70
+                bottom-6 left-1/2 -translate-x-1/2
+                xl:bottom-70 xl:left-[75%]
+                "
         >
           <svg
             className="w-10 h-10 text-white animate-swipe"
