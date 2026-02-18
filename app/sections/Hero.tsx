@@ -4,7 +4,11 @@ import gsap from "gsap";
 import { words } from "../constants";
 import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
-import HeroExperience from "../components/models/hero-models/HeroExperience";
+import dynamic from "next/dynamic";
+const HeroExperience = dynamic(
+  () => import("../components/models/hero-models/HeroExperience"),
+  { ssr: false },
+);
 import { useState } from "react";
 import { TextWritter } from "../components/models/hero-models/TextWritter";
 import Image from "next/image";
